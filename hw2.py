@@ -49,7 +49,6 @@ def shred(filename):
 def main():
     # find the counts of each letter in the file
     letter_counts = shred('letter.txt')
-    print("Q1")
     for letter, count in letter_counts.items():
         print(f"{letter} {count}")
 
@@ -59,7 +58,6 @@ def main():
     # find X1 log e1 and X1 log s1
     # X1 is the count of the letter 'A'
     x1 = letter_counts['A']
-    print("Q2")
     print(f"{x1 * math.log(e[0]):.4f}")
     print(f"{x1 * math.log(s[0]):.4f}")
 
@@ -77,7 +75,6 @@ def main():
         s_sum += letter_counts[chr(ord('A') + i)] * math.log(s[i])
     f_spanish = math.log(0.4) + s_sum
 
-    print("Q3")
     print(f"{f_english:.4f}")
     print(f"{f_spanish:.4f}")
 
@@ -90,7 +87,6 @@ def main():
     else:
         probability = 1 / (1 + math.exp(diff))
 
-    print("Q4")
     print(f"{probability:.4f}")
 
 if __name__ == "__main__":
